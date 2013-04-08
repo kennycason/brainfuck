@@ -13,7 +13,6 @@ void printInstructions();
 void clearDataBuffer();
 void printDataBuffer();
 
-
 unsigned int* cell; /* cell buffer, all program cell is stored in here */
 unsigned int cellSize = 0;
 
@@ -24,9 +23,6 @@ unsigned int instructionsSize = 0;
 
 unsigned int* CP = NULL; /* cell Pointer */
 
-/*
- *
- */
 int main(int argc, char *argv[]) {
     int i;
     for(i = 1; i < argc; i++) { /* handle parameters */
@@ -57,7 +53,6 @@ int main(int argc, char *argv[]) {
     runInstructions();
     return 0;
 }
-
 
 void runInstructions() {
     int i; // used in for loops
@@ -140,10 +135,6 @@ void runInstructions() {
     }
 }
 
-
-/*
- *
- */
 int loadFile(char inFile[256]) {
     FILE *fp;
     fp=fopen(inFile, "r");
@@ -166,9 +157,6 @@ int loadFile(char inFile[256]) {
     return 0;
 }
 
-/*
- *
- */
 void printInstructions() {
     int i;
     for(i = 0; i < instructionsSize; i++) {
@@ -177,9 +165,6 @@ void printInstructions() {
     printf("\n");
 }
 
-/*
- *
- */
 void clearDataBuffer() {
     int i;
     for(i = 0; i < cellSize; i++) {
@@ -187,9 +172,6 @@ void clearDataBuffer() {
     }
 }
 
-/*
- *
- */
 void printDataBuffer() {
     int i;
     printf("\n");
