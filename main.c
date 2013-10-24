@@ -108,16 +108,16 @@ void runInstructions() {
                     }
                 }
                 break;
-            case 'c':  /* OUTPUT */
+            case '.':  /* OUTPUT */
                 printf("%c",(char)*CP);
                 break;
-            case 'd':
+            case ':':
                 printf("%u",*CP);
                 break;
-            case 'C': /* INPUT */
+            case ',': /* INPUT */
                 while (scanf("%c", CP) != 1);
                 break;
-            case 'D':
+            case ';':
                 while (scanf("%u", CP) != 1);
                 break;
 
